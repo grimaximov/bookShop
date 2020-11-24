@@ -1,0 +1,7 @@
+# Включаем правило перенаправления
+RewriteEngine On
+# Для физически существующих файлов, перенаправление отключаем
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Само правило для перенаправления
+RewriteRule (.*) index.php
